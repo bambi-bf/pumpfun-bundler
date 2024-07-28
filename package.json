@@ -1,0 +1,57 @@
+{
+  "name": "pumpdotfun-sdk",
+  "version": "1.3.2",
+  "description": "A simple SDK for interacting with pumpdotfun",
+  "module": "./dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "browser": "./dist/browser/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && npm run build:node && npm run build:browser",
+    "build:node": "tsc && tsc -p tsconfig.cjs.json",
+    "build:browser": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "start": "npx ts-node ./example/basic/index.ts"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rckprtr/pumpdotfun-sdk.git"
+  },
+  "keywords": [
+    "pumpdotfun",
+    "sdk",
+    "solana"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@coral-xyz/borsh": "^0.30.1",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/bn.js": "^5.1.5",
+    "@types/node": "^20.14.1",
+    "dotenv": "^16.4.5",
+    "js-sha256": "^0.11.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^4.18.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@fleekxyz/sdk": "^1.4.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.89.1",
+    "axios": "^1.6.8",
+    "jito-ts": "^4.1.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.3.3",
+    "undici": "^6.19.2"
+  }
+}
