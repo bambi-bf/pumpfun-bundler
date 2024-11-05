@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the best, fastest, and most efficient self-bundling script for PumpFun, allowing you to create a token and buy tokens with your own 25 buyers in one single bundle.
+This is the best, fastest, and most efficient self-bundling script for PumpFun, allowing you to create a token and buy tokens with your own 2 buyers in one single bundle.
 
 ## Installation
 
